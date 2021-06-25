@@ -1,0 +1,22 @@
+int intersectPoint(Node* head1, Node* head2)
+{
+    // Your Code Here
+    Node* itr=head1;
+    while(itr!=NULL)  //Mark all nodes visited of first linked list.
+    {
+        itr->data=itr->data+100000;   //Marking visted nodes by making it larger than the upper limit of data given
+        itr=itr->next;
+    }
+    
+    itr=head2;   // Now traverse through second linked list.
+    while(itr!=NULL)
+    {
+        if(itr->data>=100000)  //Node is visited if the data is larger than the 100000 and return first such node.
+        {
+            return itr->data-100000;
+        }
+        itr=itr->next;
+    }
+    return -1;
+}
+

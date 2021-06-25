@@ -1,0 +1,2 @@
+Iterative approach count= 7
+Recursive approach count= 7
